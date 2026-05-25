@@ -7,7 +7,7 @@
     "build": "eleventy",
     "serve": "eleventy --serve",
     "watch": "eleventy --watch",
-    "test": "node --test tests/"
+    "test": "node --test"
   },
   "license": "ISC",
   "devDependencies": {
