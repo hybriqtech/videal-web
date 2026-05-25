@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+node_modules/
+_site/
+.env
+.env.*
+.claude/
+# Backstop contra copia accidental desde el repo padre privado:
+/convenciones/
+/resources/
+/scripts/
+/.aiplans/
+/CLAUDE.md
