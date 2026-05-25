@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { HtmlBasePlugin } = require("@11ty/eleventy");
 
 // Minificador CSS conservador (basado en el de CLN): quita comentarios no-bang,
 // colapsa whitespace y espacios junto a delimitadores. No toca strings ni los
@@ -28,6 +29,10 @@ module.exports = function (eleventyConfig) {
     }
   });
 
+  // Reescribe rutas absolutas (/css, /img, /quienes-somos…) anteponiendo el
+  // pathPrefix, para que la web funcione bajo el subdirectorio de GitHub Pages.
+  eleventyConfig.addPlugin(HtmlBasePlugin);
+
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
@@ -46,6 +51,7 @@ module.exports = function (eleventyConfig) {
 
   return {
     dir: { input: "src", output: "_site", includes: "_includes", data: "_data" },
+    pathPrefix: "/videal-web/",
     templateFormats: ["njk", "html", "md"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk"
