@@ -92,7 +92,7 @@
   }
   .brand{ display:flex; align-items:center; gap:12px; }
   .brand .mark{
-    width:auto; height:58px;
+    width:auto; height:48px;
     display:grid; place-items:center;
   }
   .brand .mark img{ width:auto; height:100%; object-fit:contain; display:block; }
@@ -676,7 +676,7 @@
     .acts-grid{ grid-template-columns: 1fr; }
     .section-head{ flex-direction:column; align-items:flex-start; }
     nav.top ul li:not(.nav-cta) a{ font-size:25px; padding:16px 4px; }
-    .brand .mark{ height:48px; }
+    .brand .mark{ height:44px; }
   }
 
   @keyframes navItemIn{
