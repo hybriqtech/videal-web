@@ -42,3 +42,14 @@ test("la home renderiza las 12 actividades", () => {
   const n = (html.match(/class="act"/g) || []).length;
   assert.strictEqual(n, 12, `esperaba 12 actividades, hay ${n}`);
 });
+
+// Regresión: la marca del logo debe tener ALTURA EXPLÍCITA en px. Un height:100%
+// no resuelve dentro del contenedor y la imagen tomaba su ancho natural (486px),
+// reventando el layout del navbar. Ver depuración 2026-05-25.
+test("el logo de la marca tiene altura explícita (no height:100%)", () => {
+  const css = read("css/style.css");
+  const rule = (css.match(/\.brand \.mark img\{[^}]*\}/) || [])[0] || "";
+  assert.ok(rule, "falta la regla .brand .mark img");
+  assert.ok(/height:\d+px/.test(rule), `.brand .mark img debe fijar height en px: ${rule}`);
+  assert.ok(!/height:100%/.test(rule), `.brand .mark img no debe usar height:100%: ${rule}`);
+});

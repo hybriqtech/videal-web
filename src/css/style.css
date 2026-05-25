@@ -92,10 +92,11 @@
   }
   .brand{ display:flex; align-items:center; gap:12px; }
   .brand .mark{
-    width:auto; height:48px;
-    display:grid; place-items:center;
+    display:inline-flex; align-items:center;
   }
-  .brand .mark img{ width:auto; height:100%; object-fit:contain; display:block; }
+  /* Altura EXPLÍCITA en la imagen (no height:100%, que no resuelve dentro
+     del contenedor y dejaba la imagen a su ancho natural de 486px). */
+  .brand .mark img{ display:block; height:48px; width:auto; }
   .brand .name{ display:flex; flex-direction:column; line-height:1; }
   .brand .name .a{ font-family:"Sacramento"; font-size:20px; color: var(--coral-deep); margin-bottom:-4px; }
   .brand .name .b{ font-family:"Cormorant Garamond"; font-size:22px; font-weight:600; letter-spacing:0.005em; }
@@ -676,7 +677,7 @@
     .acts-grid{ grid-template-columns: 1fr; }
     .section-head{ flex-direction:column; align-items:flex-start; }
     nav.top ul li:not(.nav-cta) a{ font-size:25px; padding:16px 4px; }
-    .brand .mark{ height:44px; }
+    .brand .mark img{ height:44px; }
   }
 
   @keyframes navItemIn{
