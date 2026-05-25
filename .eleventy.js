@@ -1,13 +1,15 @@
 const fs = require("fs");
 const path = require("path");
 
-// Minificador CSS conservador (idéntico al de CLN): quita comentarios no-bang,
-// colapsa whitespace y espacios junto a delimitadores. No toca strings.
+// Minificador CSS conservador (basado en el de CLN): quita comentarios no-bang,
+// colapsa whitespace y espacios junto a delimitadores. No toca strings ni los
+// operadores + / ~ (preservarlos es necesario para que calc()/clamp() sigan
+// siendo válidos: en calc() el + exige espacios alrededor).
 function minifyCss(css) {
   return css
     .replace(/\/\*(?!\!)[\s\S]*?\*\//g, "")
     .replace(/\s+/g, " ")
-    .replace(/\s*([{}:;,>+~])\s*/g, "$1")
+    .replace(/\s*([{}:;,>])\s*/g, "$1")
     .replace(/;}/g, "}")
     .trim();
 }
