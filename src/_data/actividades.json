@@ -1,0 +1,145 @@
+[
+  {
+    "nombre": "Grupo Terapia Interfamiliar",
+    "color": "interfam",
+    "chip": "Grupo · Sin cita",
+    "quote": "\"La terapia hecha entre todos.\"",
+    "horarios": [
+      { "dt": "Día", "dd": "Jueves · 09:30 – 11:00" },
+      { "dt": "Sala", "dd": "3.ª P — Múltiple 2" }
+    ],
+    "facilitador": "Asociación",
+    "gratis": true
+  },
+  {
+    "nombre": "Gimnasia Fitness",
+    "color": "gym",
+    "chip": "Cuerpo · 3 sesiones",
+    "quote": "Mover el cuerpo, mover la cabeza.",
+    "horarios": [
+      { "dt": "Lun · Mié", "dd": "09:15 – 10:15 · Gimnasio" },
+      { "dt": "Viernes", "dd": "09:15 – 10:15 · Sala Baile" }
+    ],
+    "facilitador": "Cristina",
+    "gratis": false
+  },
+  {
+    "nombre": "Yoga",
+    "color": "yoga",
+    "chip": "Cuerpo · 2 sesiones",
+    "quote": "Respirar despacio, sostenerse entera.",
+    "horarios": [
+      { "dt": "Martes", "dd": "10:00 – 11:15 · Sala Baile" },
+      { "dt": "Jueves", "dd": "12:00 – 13:15 · Sala Baile" }
+    ],
+    "facilitador": "Paqui",
+    "gratis": false
+  },
+  {
+    "nombre": "Costura",
+    "color": "costura",
+    "chip": "Taller · Grupal",
+    "quote": "Las manos ocupadas, la mente en calma.",
+    "horarios": [
+      { "dt": "Jueves", "dd": "17:00 – 20:00 · 3.ª P Múltiple 3" },
+      { "dt": "Viernes", "dd": "17:00 – 20:00 · 3.ª P Múltiple 3" }
+    ],
+    "facilitador": "Antonia",
+    "gratis": false
+  },
+  {
+    "nombre": "Movimiento y Bienestar",
+    "color": "mov",
+    "chip": "Quincenal",
+    "quote": "Una pausa quincenal para reconectar.",
+    "horarios": [
+      { "dt": "Lunes", "dd": "18:00 – 18:45 · 3.ª P Múltiple 4" },
+      { "dt": "Periodicidad", "dd": "Quincenal" }
+    ],
+    "facilitador": "Dix",
+    "gratis": false
+  },
+  {
+    "nombre": "Servicio de Psicología",
+    "color": "psico",
+    "chip": "Individual · Cita previa",
+    "quote": "Sesiones individuales de psicología.",
+    "horarios": [
+      { "dt": "Lunes", "dd": "10:00 – 14:00 · 1.ª P Salita TASS" }
+    ],
+    "facilitador": "Micaela",
+    "gratis": false
+  },
+  {
+    "nombre": "Coaching Emocional",
+    "color": "coach",
+    "chip": "Individual · Cita previa",
+    "quote": "Acompañamiento en momentos de cambio o crisis.",
+    "horarios": [
+      { "dt": "Martes", "dd": "11:00 – 13:00 · 1.ª P Salita TASS" },
+      { "dt": "Miércoles", "dd": "17:00 – 19:00 · 3.ª P Múltiple 2" },
+      { "dt": "Jueves", "dd": "17:00 – 19:00 · 1.ª P Salita TASS" }
+    ],
+    "facilitador": "Montse",
+    "gratis": false
+  },
+  {
+    "nombre": "Mente Activa",
+    "color": "mente",
+    "chip": "Grupo",
+    "quote": "Estimulación y juegos para mantenerse despierta.",
+    "horarios": [
+      { "dt": "Jueves", "dd": "17:00 – 19:00 · 1.ª P Polivalente 1" }
+    ],
+    "facilitador": "Cristina",
+    "gratis": false
+  },
+  {
+    "nombre": "Terapia Narrativa",
+    "color": "narr",
+    "chip": "Quincenal",
+    "quote": "\"El arte de leer(se).\"",
+    "horarios": [
+      { "dt": "Miércoles", "dd": "17:15 – 19:00 · 1.ª P Múltiple 2" },
+      { "dt": "Periodicidad", "dd": "Quincenal" }
+    ],
+    "facilitador": "Montse",
+    "gratis": false
+  },
+  {
+    "nombre": "Cuerpo en Movimiento, Mente en Calma",
+    "color": "cuerpo",
+    "chip": "Mensual",
+    "quote": "Caminata grupal por El Campello.",
+    "horarios": [
+      { "dt": "Frecuencia", "dd": "1 vez al mes · 1 hora" },
+      { "dt": "Lugar", "dd": "Caminata por El Campello" }
+    ],
+    "facilitador": "Asociación",
+    "gratis": false
+  },
+  {
+    "nombre": "Viernes Videal",
+    "color": "viernes",
+    "chip": "Mensual · Abierto",
+    "quote": "Una tarde llena de experiencias para todo el barrio.",
+    "horarios": [
+      { "dt": "Día", "dd": "1.º viernes de mes · 17:30 – 20:00" },
+      { "dt": "Sala", "dd": "Salón de Actos" }
+    ],
+    "facilitador": "Asociación",
+    "gratis": true
+  },
+  {
+    "nombre": "Una Silla para Ti",
+    "color": "escucha",
+    "chip": "Escucha · Cita previa",
+    "quote": "\"Un lugar donde parar y hablar con calma.\"",
+    "horarios": [
+      { "dt": "Viernes", "dd": "17:00 – 20:00 · 1.ª P Salita TASS" },
+      { "dt": "Es", "dd": "Espacio de escucha activa, no terapia." }
+    ],
+    "facilitador": "José",
+    "gratis": true
+  }
+]
