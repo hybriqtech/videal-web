@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ title or "Asociación Videal — Por la salud mental" }}</title>
+<meta name="description" content="{{ description or 'Asociación de salud mental en El Campello (Alicante): acompañamiento, escucha activa y actividades. Por la salud mental.' }}" />
+<meta property="og:title" content="{{ title or 'Asociación Videal — Por la salud mental' }}" />
+<meta property="og:description" content="{{ description or 'Acompañamiento y cuidado de la salud mental en El Campello (Alicante).' }}" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+{% include "header.njk" %}
+{{ content | safe }}
+{% include "footer.njk" %}
+</body>
+</html>
