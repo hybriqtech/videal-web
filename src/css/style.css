@@ -494,47 +494,26 @@
   .find .info .socials a:hover{ background: var(--coral-soft); }
 
   .find .map{
-    background: var(--paper);
+    display:block;
+    background: var(--cream-2);
     border: var(--stroke) solid var(--ink);
     border-radius: var(--radius-lg);
     position: relative; overflow:hidden;
     min-height: 420px;
-    background:
-      linear-gradient(180deg, #EFE7DA 0%, #E5DAC8 100%);
   }
-  /* Mapa estilizado con líneas */
-  .find .map::before{
-    content:""; position:absolute; inset:0;
-    background:
-      linear-gradient(115deg, transparent 0 30%, rgba(168,199,216,0.35) 30% 34%, transparent 34% 60%, rgba(168,199,216,0.25) 60% 62%, transparent 62%),
-      linear-gradient(60deg, transparent 0 40%, rgba(31,26,23,0.10) 40% 41%, transparent 41% 70%, rgba(31,26,23,0.07) 70% 71%, transparent 71%),
-      linear-gradient(20deg, transparent 0 25%, rgba(31,26,23,0.06) 25% 26%, transparent 26%);
+  .find .map img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover; display:block;
+    transition: transform .5s ease;
   }
-  .find .map::after{
-    content:""; position:absolute; right:-40px; bottom:-40px; width:240px; height:240px;
-    background: radial-gradient(circle, rgba(168,199,216,0.6), rgba(168,199,216,0) 60%);
-    border-radius:50%;
+  .find .map:hover img{ transform: scale(1.04); }
+  .find .map .map-cta{
+    margin-top: 8px;
+    color: var(--coral-deep); font-weight:600; font-size:12.5px;
   }
-  .find .map .pin{
-    position:absolute; top: 42%; left: 46%;
-    transform: translate(-50%, -100%);
-    display:flex; flex-direction:column; align-items:center; gap:4px;
-    z-index: 2;
-  }
-  .find .map .pin .dot{
-    width: 28px; height:28px; border-radius:50%;
-    background: var(--coral); border: var(--stroke) solid var(--ink);
-    box-shadow: 0 2px 0 var(--ink), 0 12px 20px -10px rgba(232,93,125,0.7);
-  }
-  .find .map .pin .label{
-    background: var(--paper); border: var(--stroke) solid var(--ink);
-    padding: 8px 12px; border-radius: 10px;
-    font-size: 13px; font-weight: 600; white-space:nowrap;
-    margin-top: 8px; box-shadow: var(--shadow-sm);
-  }
-  .find .map .pin .label .s{ font-family:"Sacramento"; font-size: 22px; color: var(--coral-deep); display:block; line-height:.9; }
   .find .map .legend{
-    position:absolute; left: 20px; top: 20px;
+    position:absolute; left: 20px; top: 20px; z-index:2;
     background: var(--paper); border: var(--stroke) solid var(--ink);
     border-radius: 12px;
     padding: 12px 16px;
@@ -712,7 +691,8 @@
     nav.top.nav-open ul li,
     .nav-toggle .bars,
     .nav-toggle .bars::before,
-    .nav-toggle .bars::after{
+    .nav-toggle .bars::after,
+    .find .map img{
       transition-duration:.001s !important;
       animation:none !important;
     }
