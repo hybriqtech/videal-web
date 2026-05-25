@@ -1,0 +1,26 @@
+---
+layout: layouts/base.njk
+permalink: /actividades/
+title: "Actividades — Asociación Videal"
+description: "Calendario semanal de actividades de la Asociación Videal en El Campello: grupos, yoga, costura, coaching, escucha activa y más."
+---
+<section><div class="wrap">
+  <div class="section-head"><div class="l">
+    <span class="eyebrow">Calendario semanal</span>
+    <h2 style="margin-top:10px;">Nuestras <em>actividades</em>.</h2>
+    <p>Esta página recogerá el calendario completo. Por ahora puedes ver el resumen en la <a href="/#actividades" style="border-bottom:1px solid var(--coral-deep);">portada</a>.</p>
+  </div></div>
+  <div class="acts-grid">
+  {% for act in actividades %}
+    <article class="act" style="--c: var(--act-{{ act.color }});">
+      <div class="stripe"></div>
+      {% if act.gratis %}<span class="gratis">gratis</span>{% endif %}
+      <span class="chip">{{ act.chip }}</span>
+      <h4>{{ act.nombre }}</h4>
+      {% if act.quote %}<p class="quote">{{ act.quote }}</p>{% endif %}
+      <dl>{% for h in act.horarios %}<dt>{{ h.dt }}</dt><dd>{{ h.dd }}</dd>{% endfor %}</dl>
+      <div class="foot"><span class="who"><b>{{ act.facilitador }}</b></span></div>
+    </article>
+  {% endfor %}
+  </div>
+</div></section>
