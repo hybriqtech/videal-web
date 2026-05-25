@@ -31,6 +31,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
+  // El CSS se minifica en el hook eleventy.before (no es passthrough), así que
+  // hay que vigilarlo explícitamente para que `--serve` recompile y recargue
+  // el navegador al editar estilos. Sin esto, el dev server sirve CSS rancio.
+  eleventyConfig.addWatchTarget("src/css");
+
   // Filtro de fechas en español (para uso futuro en eventos)
   eleventyConfig.addFilter("fechaEs", function (dateVal) {
     const meses = ["enero","febrero","marzo","abril","mayo","junio",
